@@ -9,6 +9,15 @@ client = MongoClient("mongodb+srv://dummy:1234@cluster0.foqdb25.mongodb.net/?ret
 db = client.test
 collection = db["flask-tutorial"]
 
+@app.route('/submittodoitem', methods=['POST'])
+def submit_todo_item():
+    itemName = request.form['itemName']
+    itemDescription = request.form['itemDescription']
+    db.todo_items.insert_one({"itemName": itemName, "itemDescription": itemDescription})
+    return "To-Do item submitted successfully"
+
+
+
 # -------- Route 1: Read JSON file and return list ----------
 @app.route('/api')
 def get_data():
