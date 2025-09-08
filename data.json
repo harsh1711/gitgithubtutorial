@@ -1,5 +1,6 @@
 [
   {"id": 1, "name": "Alice", "role": "Developer"},
   {"id": 2, "name": "Bob", "role": "Tester"},
-  {"id": 3, "name": "Charlie", "role": "Manager"}
+  {"id": 3, "name": "Charlie", "role": "Manager"},
+  {"id": 4, "name": "Harsh", "role": "Manager"}
 ]
